@@ -310,8 +310,8 @@
                                 <div class="new-tag"> <span> new </span> </div>
                             </div>
                             <ul class="thumbnail-conten list-items black-bg">
-                                <li> <a href="#"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
-                                <li> <a href="#" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
+                                <li> <a href="{{url('/view_product/'.$v_product->product_id)}}"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
+                                <li> <a href="{{url('/view_product/'.$v_product->product_id)}}" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
                             </ul>                                                    
                         </div>
                         <div class="caption">
@@ -389,8 +389,8 @@
                                 <div class="sale-tag"> <span> sale </span> </div>
                             </div>
                             <ul class="thumbnail-conten list-items black-bg">
-                                <li> <a href="#"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
-                                <li> <a href="#" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
+                                <li> <a href="{{url('/view_product/'.$v_product->product_id)}}"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
+                                <li> <a href="{{url('/view_product/'.$v_product->product_id)}}" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
                             </ul>                                                    
                         </div>
                         <div class="caption">

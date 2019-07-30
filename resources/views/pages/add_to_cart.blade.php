@@ -1,7 +1,6 @@
 
 @extends('layout')
-@section('title', 'Shoping-Cart')
-@section('category')
+@section('content')
 <div class="container"> 
     <!--Breadcrumb Section Start-->
     <section class="breadcrumb-bg light-breadcrumb light-bg">                
@@ -18,7 +17,6 @@
                 <form class="cart-form">
                     <?php 
                     $contents=Cart::content();
-
                     ?>
                     <table class="product-table black-color table-bordered table-inverse">
                         <thead class="font-2">
@@ -70,20 +68,26 @@
                         <div class="col-md-12">
                             <div class="continue-shopping">
                                 <div class="shp-btn col-sm-8">
-                                    <a class="theme-btn btn"> continue shopping </a>
+                                    <a href="{{url('/')}}" class="theme-btn btn"> continue shopping </a>
+
                                 </div>
                                 <div class="col-md-6 col-sm-8">
                                     <div class="chk-total text-right">
                                         <ul class="font-2">
                                             <li class="title-1 size-18 space-top-15"> <b> grand total  <span class="red-color">TK.{{Cart::total()}}</span> </b> </li>
                                             <li class="space-10"> <hr class="fullwidth-divider"> </li>
+                                            @if($customer_id=Session::get('customer_id')!=NULL)
                                             <li>
-                                             <button class="theme-btn-1 btn submit-btn" type="submit"> <b> proceed to checkout </b> </button> 
+                                            <a href="{{url('/checkout')}}" class="theme-btn-1 btn submit-btn">proceed to checkout</a> 
                                             </li>
+                                            @else
+                                            <li>
+                                            <a href="{{url('/login-checkout')}}" class="theme-btn-1 btn submit-btn">proceed to checkout</a> 
+                                            </li>
+                                            @endif
                                         </ul>
-                                            <a href="#"> Checkout with Mutilple Adresses </a>
-                                        </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
 

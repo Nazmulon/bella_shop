@@ -10,12 +10,13 @@
                         <ul class="list-items pull-right top-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >My Account</a>
-                                <ul class="dropdown-menu">  
-                                    <li><a href="#">My Account</a></li>                                                
-                                    <li><a href="#"> Account Information </a></li>                                                
-                                    <li><a href="#">Change Password</a></li>
-                                    <li><a href="#">Address Books</a></li>
-                                </ul>
+                                <ul class="dropdown-menu"> 
+                                @if($customer_id=Session::get('customer_id')!=NULL) 
+                                    <li><a href="{{url('/customer_logout')}}"><i class="fa fa-lock"></i> Logout</a></li>
+                                @else
+                                    <li><a href="{{url('/login-checkout')}}"><i class="fa fa-lock"></i> Login</a></li>
+                                @endif                                    
+                        </ul>
                             </li>                                                                  
                     </ul>
                 </div>
@@ -99,7 +100,7 @@
                                             <a href="{{url('/show_cart')}}" class="theme-btn-1 btn small-btn">View Cart</a>
                                         </div>
                                         <div class="pull-right"> 
-                                            <a href="" class="theme-btn btn small-btn"> Checkout </a>
+                                            <a href="{{url('/login-checkout')}}" class="theme-btn btn small-btn"> Checkout </a>
                                         </div>
                                     </li>
                                 </ul>
