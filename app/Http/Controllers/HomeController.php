@@ -18,7 +18,8 @@ class HomeController extends Controller
                         ->select('tbl_products.*', 'tbl_category.category_name', 'tbl_manufactur.manufactur_name')
                         ->where('tbl_products.publication_status',1)
                         ->limit(8)
-                        ->get();
+                        ->get()
+                        ->random(8);
         $published_product=view('pages.home_content')->with('all_published_product', $all_published_product);
         return view('layout')->with('pages.home_content', $published_product);
     

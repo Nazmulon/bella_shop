@@ -78,12 +78,13 @@
                                             <li class="space-10"> <hr class="fullwidth-divider"> </li>
                                             @if($customer_id=Session::get('customer_id')!=NULL)
                                             <li>
-                                            <a href="{{url('/checkout')}}" class="theme-btn-1 btn submit-btn">proceed to checkout</a> 
+                                            <a href="{{url('/checkout')}}" class="theme-btn-1 btn submit-btn">Checkout</a> 
                                             </li>
                                             @else
                                             <li>
-                                            <a href="{{url('/login-checkout')}}" class="theme-btn-1 btn submit-btn">proceed to checkout</a> 
+                                            <a href="{{url('/login-checkout')}}" class="theme-btn-1 btn submit-btn">Checkout</a> 
                                             </li>
+                                           
                                             @endif
                                         </ul>
                                     </div>

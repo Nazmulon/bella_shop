@@ -1018,12 +1018,12 @@ a:focus {
     -webkit-transition: all ease-out 0.4s;
     -ms-transition: all ease-out 0.4s;
 }
-.main-header{
+/*.main-header{
     display: inline-block;
     width: 100%;
     vertical-align: middle; 
     z-index: 100;    
-}
+}*/
 .navbar-brand,.primary-navbar > li, .top-right{
     padding-top: 30px;
     padding-bottom: 30px;

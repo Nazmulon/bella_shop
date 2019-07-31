@@ -23,6 +23,9 @@ Route::post('/save-shipping-details', 'CheckoutController@save_shipping_details'
 Route::post('/customer_login', 'CheckoutController@customer_login');
 Route::get('/customer_logout', 'CheckoutController@customer_logout');
 
+Route::get('/payment', 'CheckoutController@payment');
+Route::post('/order_place', 'CheckoutController@order_place');
+
 
 
 
