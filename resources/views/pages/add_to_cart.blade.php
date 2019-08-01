@@ -76,9 +76,13 @@
                                         <ul class="font-2">
                                             <li class="title-1 size-18 space-top-15"> <b> grand total  <span class="red-color">TK.{{Cart::total()}}</span> </b> </li>
                                             <li class="space-10"> <hr class="fullwidth-divider"> </li>
-                                            @if($customer_id=Session::get('customer_id')!=NULL)
+                                            <?php $customer_id=Session::get('customer_id');
+                                            $shipping_id=Session::get('shipping_id');
+
+                                             ?>
+                                            @if($customer_id !=NULL && $shipping_id !=NULL)
                                             <li>
-                                            <a href="{{url('/checkout')}}" class="theme-btn-1 btn submit-btn">Checkout</a> 
+                                            <a href="{{url('/payment')}}" class="theme-btn-1 btn submit-btn">Checkout</a> 
                                             </li>
                                             @else
                                             <li>

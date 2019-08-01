@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Http\Requests;
 use Session;
+use Cart;
 use Illuminate\Support\Facades\Redirect;
 Session_start();
 
@@ -31,11 +32,8 @@ class CheckoutController extends Controller
     }
 
     public function checkout(){
-    	// $all_published_category=DB::table('tbl_category')
-     //                            ->where('publication_status',1)
-     //                            ->get();
-     //    $published_category=view('pages.payment')->with('all_published_category', $all_published_category);
-        return view('layout')->with('pages.payment');
+    	
+        return view('pages.payment');
     }
 
     public function save_shipping_details(Request $request){
@@ -77,10 +75,49 @@ class CheckoutController extends Controller
     }
 
     public function order_place(Request $request){
-        $payment_gateway=$request->payment_gateway;
-        $payment_gateway=$request->payment_gateway;
-        $payment_gateway=$request->payment_gateway;
-        $payment_gateway=$request->payment_gateway;
+        $payment_method=$request->payment_method;
+
+        $shipping_id=Session::get('shipping_id');
+        
+        
+        $pdata=array();
+        $pdata['payment_method']=$request->payment_method;
+        $pdata['payment_status']='panding';
+        $payment_id=DB::table('tbl_payment')
+                ->insertGetId($pdata);
+
+        $odata=array();
+        $odata['customer_id']=Session::get('customer_id');
+        $odata['shipping_id']=Session::get('shipping_id');
+        $odata['payment_id']=$payment_id;
+        $odata['order_total']=Cart::total();
+        $odata['order_status']='panding';
+
+        $order_id=DB::table('tbl_order')
+                ->insertGetId($odata);
+
+        $contents=Cart::content();
+        $oddata=array();
+
+        foreach($contents as $v_content){
+            $oddata['order_id']=$order_id;
+            $oddata['product_id']=$v_content->id;
+            $oddata['product_name']=$v_content->name;
+            $oddata['product_price']=$v_content->price;
+            $oddata['product_sales_quantity']=$v_content->qty;
+
+            DB::table('tbl_order_details')
+                ->insert($oddata);
+        }
+        if($payment_method=='handcash'){
+            echo "successfully done";
+        }elseif ($payment_method=='bkash') {
+            echo "payment successfully by bkash";
+        }elseif ($payment_method=='cart') {
+            echo "cart add successfully";
+        }else{
+            echo "no cart selected";
+        }
     }
 
     public function customer_logout(){
