@@ -33,7 +33,7 @@ class CheckoutController extends Controller
 
     public function checkout(){
     	
-        return view('pages.payment');
+        return view('pages.checkout');
     }
 
     public function save_shipping_details(Request $request){
@@ -78,7 +78,7 @@ class CheckoutController extends Controller
         $payment_method=$request->payment_method;
 
         $shipping_id=Session::get('shipping_id');
-        
+
         
         $pdata=array();
         $pdata['payment_method']=$request->payment_method;
@@ -110,7 +110,8 @@ class CheckoutController extends Controller
                 ->insert($oddata);
         }
         if($payment_method=='handcash'){
-            echo "successfully done";
+            Cart::destroy();
+            return view('pages.handcash');
         }elseif ($payment_method=='bkash') {
             echo "payment successfully by bkash";
         }elseif ($payment_method=='cart') {
@@ -118,6 +119,15 @@ class CheckoutController extends Controller
         }else{
             echo "no cart selected";
         }
+    }
+
+    public function manage_order(){
+        $all_order_info=DB::table('tbl_order')
+                        ->join('tbl_customer', 'tbl_order.customer_id', '=', 'tbl_customer.customer_id')
+                        ->select('tbl_order.*', 'tbl_customer.customer_name')
+                        ->get();
+        $manage_order=view('admin.manage_order')->with('all_order_info', $all_order_info);
+        return view('admin_layout')->with('admin.manage_order', $manage_order);
     }
 
     public function customer_logout(){

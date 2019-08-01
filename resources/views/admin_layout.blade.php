@@ -77,7 +77,7 @@
                     </ul>
                 </li>
 
-              <li class="has-sub nav-item"><a href="#"><i class="icon-grid"></i><span data-i18n="" class="menu-title">Social Link</span></a></li>
+              <li class="has-sub nav-item"><a href="{{url('/manage_order')}}"><i class="icon-grid"></i><span data-i18n="" class="menu-title">Order List</span></a></li>
 
               <li class="has-sub nav-item"><a href="#"><i class="icon-notebook"></i><span data-i18n="" class="menu-title">Band Logo</span></a>
               </li>

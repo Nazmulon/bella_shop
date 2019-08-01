@@ -282,7 +282,7 @@
                                 <div class="sale-tag"> <span> sale </span> </div>
                             </div>
                             <ul class="thumbnail-conten list-items black-bg">
-                                <li> <a href="#"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
+                                <li> <a href=""> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
                                 <li> <a href="#"> <i class="icon ion-ios-heart-outline size-20"></i> </a> </li>
                                 <li> <a href="#" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
                             </ul>                                                    

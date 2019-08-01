@@ -160,7 +160,7 @@
                                         <button class="btn plus"><i class="icon_plus"></i></button>
                                     </div>
                                     <div class="add-to-cart">
-                                        <button type="submit" class="theme-btn-1 btn cart-btn"> <i class="icon ion-ios-plus-empty white-color size-24"></i> Add to Cart </button>                                       
+                                        <button type="{{url('/show_categoey/'.$v_category->category_id)}}" class="theme-btn-1 btn cart-btn"> <i class="icon ion-ios-plus-empty white-color size-24"></i> Add to Cart </button>                                       
                                     </div> 
                                 </form>                                   
                             </div>
@@ -218,7 +218,7 @@
                                             <ul class="thumbnail-conten list-items black-bg">
                                                 <li>
 
-                                                 <a href="#"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> 
+                                                 <a href="{{url('/show_categoey/'.$v_category->category_id)}}"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> 
                                              </li>
                                                 <li> <a href="#"> <i class="icon ion-ios-heart-outline size-20"></i> </a> </li>
                                                 <li> <a href="#product-preview" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>

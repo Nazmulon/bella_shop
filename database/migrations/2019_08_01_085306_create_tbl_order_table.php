@@ -16,7 +16,7 @@ class CreateTblOrderTable extends Migration
         Schema::create('tbl_order', function (Blueprint $table) {
             $table->increments('order_id');
             $table->integer('customer_id');
-            $table->integer('shipping_id')->nullable();
+            $table->integer('shipping_id');
             $table->integer('payment_id');
             $table->string('order_total');
             $table->integer('order_status');

@@ -25,6 +25,7 @@ Route::get('/customer_logout', 'CheckoutController@customer_logout');
 
 Route::get('/payment', 'CheckoutController@payment');
 Route::post('/order_place', 'CheckoutController@order_place');
+Route::get('/manage_order', 'CheckoutController@manage_order');
 
 
 

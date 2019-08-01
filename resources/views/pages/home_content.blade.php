@@ -7,7 +7,6 @@
     <div class="container theme-container">
         <div class="col-md-3 col-sm-4 col-xs-12 cat-menu theme-color-bg">
             <h2 class="section-title">categories</h2> 
-            <i class="icon ion-android-menu cate-toggle"></i>
         </div>
         <div class="col-md-9 col-sm-8 col-xs-12 cat-search">
             <form action="#" class="cate-form">
@@ -15,16 +14,6 @@
                     <select
                     class="selectpicker white-color" data-live-search="false" data-width="100%"
                     data-toggle="tooltip" title="All Categories">
-                    <option>Clothing</option>
-                    <option>Accesories</option>
-                    <option> Jwellery </option>
-                    <option> Technoogt </option>
-                    <option> Living  </option>
-                    <option> Promotion </option>
-                    <option> Accessory </option>
-                    <option> Mobile </option>
-                    <option> Job </option>
-
                 </select>
             </div>
             <div class="no-padding  col-md-10 col-sm-8 col-xs-7">
@@ -75,7 +64,7 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption customin slide-box fadeout"
+                            {{-- <div class="tp-caption customin slide-box fadeout"
                             data-x="center"
                             data-y="70"
                             data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600; transformOrigin:50% 50%;"
@@ -89,7 +78,7 @@
                             data-end="7300"
                             data-endspeed="300"
                             style="z-index: 2; max-width: 330px; max-height: 350px; background:#fff;width:100%;height:100%; white-space: nowrap;">
-                        </div>
+                        </div> --}}
 
                         <!-- LAYER NR. 2 -->
                         <div class="tp-caption lfb font-2 upper-text gray-color"
