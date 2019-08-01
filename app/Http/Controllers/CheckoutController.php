@@ -130,6 +130,10 @@ class CheckoutController extends Controller
         return view('admin_layout')->with('admin.manage_order', $manage_order);
     }
 
+    public function view_order(){
+        return view('admin.view_order');
+    }
+
     public function customer_logout(){
     	Session::flush();
     	return redirect('/');

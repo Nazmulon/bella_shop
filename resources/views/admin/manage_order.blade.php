@@ -41,7 +41,7 @@
                                     </td> --}}
                                     <td>
                                      
-                                        <a class="info p-0" href="" data-original-title="" title="">
+                                        <a class="info p-0" href="{{url('/view_order/'.$v_order->order_id)}}" data-original-title="" title="">
                                             <i class="fa fa-edit font-medium-3 mr-2"></i>
                                         </a>
                                         <a class="danger p-0" href="" data-original-title="" title="">
