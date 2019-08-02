@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Debugbar;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

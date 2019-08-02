@@ -17,18 +17,23 @@
                         <table class="table table-responsive-md text-center">
                             <thead>
                                 <tr>
-                                    <th>Customer Name</th>
+                                    <th>Order ID</th>
+                                    <th>Shipping Name</th>
                                     <th>Shipping Address</th>
                                     <th>Mobile</th>
                                 </tr>
                             </thead>
                     
                             <tbody>
+                                
+
                                 @foreach($order_by_id as $v_order)
                                 <tr>
-                                    <td>{{$v_order->customer_name}}</td>
+                                    
+                                    <td>{{$v_order->order_id}}</td>
+                                    <td>{{$v_order->shipping_first_name}}</td>
                                     <td>{{$v_order->shipping_address}}</td>
-                                    <td>{{$v_order->mobile_number}}</td>
+                                    <td>{{$v_order->shipping_mobile_number}}</td>
                                     
                                 </tr>
                                 @endforeach
