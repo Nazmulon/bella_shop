@@ -50,4 +50,12 @@ class HomeController extends Controller
         $manage_product_by_details=view('pages.product_details')->with('product_by_details', $product_by_details);
         return view('layout')->with('pages.product_details', $manage_product_by_details);
     }
+
+    public function about(){
+        return view('pages.about');
+    }
+
+    public function contact(){
+        return view('pages.contact');
+    }
 }

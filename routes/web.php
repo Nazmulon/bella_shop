@@ -3,6 +3,8 @@
 
 //Front End route.........................
 Route::get('/', 'HomeController@index');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/about', 'HomeController@about');
 
 //show category in menu bar................
 Route::get('/show_categoey/{category_id}', 'HomeController@show_categoey');

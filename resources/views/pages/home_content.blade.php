@@ -54,108 +54,28 @@
                         <!-- SLIDE  -->
                         <?php
                         $all_published_slider=DB::table('tbl_slider')
-                                                ->where('publication_status',1)
-                                                ->get();
+                        ->where('publication_status',1)
+                        ->get();
                         ?> 
-                    @foreach($all_published_slider as $v_slider)
+                        @foreach($all_published_slider as $v_slider)
                         <li data-transition="boxslide" data-slotamount="7" data-masterspeed="1000" data-delay="6000"  data-thumb="{{asset('frontend/assets/img/electronic/slider/layer-img1.png')}}" data-title="NEW ARRIVAL">
                             <!-- MAIN IMAGE -->
                             <img src="{{asset($v_slider->slider_image)}}"  alt="newslide2014_1"  data-bgposition="center top" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
-                            <!-- LAYER NR. 1 -->
-                            {{-- <div class="tp-caption customin slide-box fadeout"
-                            data-x="center"
-                            data-y="70"
-                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600; transformOrigin:50% 50%;"
-                            data-speed="600"
-                            data-start="600"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            data-end="7300"
-                            data-endspeed="300"
-                            style="z-index: 2; max-width: 330px; max-height: 350px; background:#fff;width:100%;height:100%; white-space: nowrap;">
-                        </div> --}}
+                            
+                            
 
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption lfb font-2 upper-text gray-color"
-                        data-x="center" data-hoffset="0"
-                        data-y="90" data-voffset="-75" 
-                        data-speed="1000"
-                        data-start="1000"
-                        data-easing="Power4.easeInBack"
-                        data-splitin="none"
-                        data-splitout="none"
-                        data-elementdelay="0.01"
-                        data-endelementdelay="0.1"
-                        data-endspeed="500"
-                        data-endeasing="Power4.easeIn"
-                        style="z-index: 2; letter-spacing: 3px;"> <div class="sm-txt"> special sale </div>
-                    </div>
-
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption lfb section-title size-36"
-                    data-x="center" data-hoffset="0"
-                    data-y="120" data-voffset="-75" 
-                    data-speed="1200"
-                    data-start="1200"
-                    data-easing="Power4.easeInBack"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.1"
-                    data-endspeed="500"
-                    data-endeasing="Power4.easeIn"
-                    style="z-index: 3;"> <div class="lrg-txt">New Shert<br> just <span class="theme-color"> TK.1200 </span> </div>
+                            
+                        </li>  
+                        @endforeach
+                        
+                    </ul>
                 </div>
-
-                <!-- LAYER NR. 4 -->
-                <div class="tp-caption lfb"
-                data-x="center" data-hoffset="0"
-                data-y="240" data-voffset="-75" 
-                data-speed="1000"
-                data-start="1400"
-                data-easing="Power4.easeInBack"
-                data-splitin="none"
-                data-splitout="none"
-                data-elementdelay="0.01"
-                data-endelementdelay="0.1"
-                data-endspeed="500"
-                data-endeasing="Power4.easeIn"
-                style="z-index: 3;"> 
-                <div class="pera">Neque porro quisquam est qui dolorem <br> dolor sit amet, consectetur,</div>
             </div>
-
-            <!-- LAYER NR. 5 -->
-            <div class="tp-caption lfb slide-btn"
-            data-x="center" data-hoffset="0"
-            data-y="320" data-voffset="-75" 
-            data-speed="1000"
-            data-start="1600"
-            data-easing="Power4.easeInBack"
-            data-splitin="none"
-            data-splitout="none"
-            data-elementdelay="0.01"
-            data-endelementdelay="0.1"
-            data-endspeed="500"
-            data-endeasing="Power4.easeIn"
-            style="z-index: 3;">                                
-            <button class="btn btn-black btn-2"> <span class="btn-txt"> purchase now </span> <i class="btn-icon icon ion-chevron-right"></i> </button>     
-
-        </div>    
-
-    </li>  
-@endforeach
-                          
-</ul>
-</div>
-</div>
-</div>  
-<!-- / Main Slider Ends -->  
-</div>
+        </div>  
+        <!-- / Main Slider Ends -->  
+    </div>
 </section>
 @endsection
 @section('content')

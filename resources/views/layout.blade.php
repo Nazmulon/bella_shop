@@ -207,7 +207,7 @@
                                     <button class="btn plus"><i class="icon_plus"></i></button>
                                 </div>
                                 <div class="add-to-cart">
-                                    <button class=""> <i class="icon ion-ios-plus-empty white-color size-24"></i> Add to Cart </button>                                       
+                                    <button class="#"> <i class="icon ion-ios-plus-empty white-color size-24"></i> Add to Cart </button>                                       
                                 </div>                                    
                             </div>
                         </div>

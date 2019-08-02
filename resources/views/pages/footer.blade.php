@@ -7,9 +7,9 @@
                         <h2 class="logo-title font-2"> <a href="index.html"> <span class="theme-color">Ele</span> Pro </a> </h2>
                         <p class="text-widget"> EPRO is a multipurpose e-commerce PSD Template which is the most perfect solution for your store online. </p>                                   
                         <div class="get-touch">
-                            <p> <i class="icon_pin"></i> <span> 123 New Design Str, ABC Building, Melbourne, Australia.  </span> </p>                                        
-                            <p> <i class="icon_mail_alt"></i> <span> <a href="hello@yourdomain.com"> hello@yourdomain.com </a> </span> </p>
-                            <p> <i class="icon_phone "></i> <span> <a href="#"> (0044) 8647 1234 587</a> </span> </p>
+                            <p> <i class="icon_pin"></i> <span>Mirpur-1, Block-C, Road-11, Mirpur, Dhaka-1216</span> </p>                                        
+                            <p> <i class="icon_mail_alt"></i> <span> <a href="mailto:nazmulranbagha@gmail.com">nazmulranbagha@gmail.com </a> </span> </p>
+                            <p> <i class="icon_phone "></i> <span> <a href="#">01742579745</a> </span> </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 clr">  
@@ -57,7 +57,7 @@
         <div class="container theme-container">
             <div class="row">
                 <div class="col-md-6 col-sm-4">
-                    <p class="copy-rights font-2"> Copyright &copy; 2016 <a href="#" class="white-color"> EPRO </a> . All rights reserved </p>
+                    <p class="copy-rights font-2"> Copyright &copy; 2019 <a href="#" class="white-color"> EPRO </a> . All Modified MD.Nazmul Huda </p>
                 </div>
                 <div class="col-md-6 col-sm-8">
                     <ul class="list-items payment-optn">

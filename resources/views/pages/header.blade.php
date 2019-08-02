@@ -57,8 +57,8 @@
                                                             @endforeach
                                                         </ul>
                                                     </li>  
-                                        <li><a href="#about">about</a></li>                        
-                                        <li><a href="contact-us.html">Contact</a></li> 
+                                        <li><a href="{{url('/about')}}">about</a></li>                        
+                                        <li><a href="{{url('/contact')}}">Contact</a></li> 
                                     </ul>
                                 </div>
                             </nav>
@@ -70,7 +70,7 @@
                             ?>
                             <ul class="top-elements">     
                                 <li class="cart-hover"> 
-                                    <a href="{{url('/show_cart')}}" class="cart-icon size-24"><span class="items-count font-2"> <b> 2 </b> </span>   </a> 
+                                    <a href="{{url('/show_cart')}}" class="cart-icon size-24">   </a> 
                                     <ul class="pop-up-box cart-popup">
                                         @foreach($contents as $v_content)
 

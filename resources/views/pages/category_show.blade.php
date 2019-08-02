@@ -74,38 +74,7 @@
                             <img src="{{asset($v_slider->slider_image)}}"  alt="newslide2014_1"  data-bgposition="center top" data-bgrepeat="no-repeat">
                             <!-- LAYERS -->
 
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption customin slide-box fadeout"
-                            data-x="center"
-                            data-y="70"
-                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600; transformOrigin:50% 50%;"
-                            data-speed="600"
-                            data-start="600"
-                            data-easing="Power3.easeInOut"
-                            data-splitin="none"
-                            data-splitout="none"
-                            data-elementdelay="0.1"
-                            data-endelementdelay="0.1"
-                            data-end="7300"
-                            data-endspeed="300"
-                            style="z-index: 2; max-width: 330px; max-height: 350px; background:#fff;width:100%;height:100%; white-space: nowrap;">
-                        </div>
-
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption lfb font-2 upper-text gray-color"
-                        data-x="center" data-hoffset="0"
-                        data-y="90" data-voffset="-75" 
-                        data-speed="1000"
-                        data-start="1000"
-                        data-easing="Power4.easeInBack"
-                        data-splitin="none"
-                        data-splitout="none"
-                        data-elementdelay="0.01"
-                        data-endelementdelay="0.1"
-                        data-endspeed="500"
-                        data-endeasing="Power4.easeIn"
-                        style="z-index: 2; letter-spacing: 3px;"> <div class="sm-txt"> special sale </div>
-                    </div>
+                           
 
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption lfb section-title size-36"
@@ -282,9 +251,9 @@
                                 <div class="sale-tag"> <span> sale </span> </div>
                             </div>
                             <ul class="thumbnail-conten list-items black-bg">
-                                <li> <a href=""> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
+                                <li> <a href="{{url('view_product/'.$v_category->product_id)}}"> <i class="icon ion-android-add size-18"></i> <span class="font-2 upper-text"> Add To Cart </span> </a> </li>
                                 <li> <a href="#"> <i class="icon ion-ios-heart-outline size-20"></i> </a> </li>
-                                <li> <a href="#" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
+                                <li> <a href="{{url('view_product/'.$v_category->product_id)}}" data-toggle="modal"> <i class="icon ion-ios-eye-outline size-24"></i> </a> </li>
                             </ul>                                                    
                         </div>
                         <div class="caption">
